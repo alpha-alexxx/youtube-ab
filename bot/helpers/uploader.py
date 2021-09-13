@@ -57,9 +57,7 @@ class Uploader:
             )
             description = (
                 Config.VIDEO_DESCRIPTION
-                + "\nDo you love exploring subjects? Do you want to learn more about it? This video is for you!
-
-                        In this video, I will tell you how to study history. It doesn't matter what age are you! You can always start studying history and discover something new for yourself.
+                + "\nDo you love exploring subjects? Do you want to learn more about it? This video is for you! In this video, I will tell you how to study subjects. It doesn't matter what age are you! You can always start studying history and discover something new for yourself.
 
 "
             )[:5000]
