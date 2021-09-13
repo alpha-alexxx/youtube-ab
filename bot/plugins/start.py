@@ -19,6 +19,6 @@ async def _start(c: UtubeBot, m: Message):
         text=tr.START_MSG.format(m.from_user.first_name),
         quote=True,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Thank You", url="Blank")]]
+            [[InlineKeyboardButton("Thank You", url="https://www.youtube.com/channel/UCHwnjZgBoKFSaxUhrLx1lWQ")]]
         ),
     )
