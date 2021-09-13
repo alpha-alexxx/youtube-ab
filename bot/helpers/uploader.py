@@ -16,9 +16,7 @@ class Uploader:
         self.file = file
         self.title = title
         self.video_category = {
-         
-           27: "Education",
-         
+         27: "Education",
         }
 
     async def start(self, progress: callable = None, *args) -> Tuple[bool, str]:
@@ -57,9 +55,8 @@ class Uploader:
             )
             description = (
                 Config.VIDEO_DESCRIPTION
-                + "\nDo you love exploring subjects? Do you want to learn more about it? This video is for you! In this video, I will tell you how to study subjects. It doesn't matter what age are you! You can always start studying history and discover something new for yourself.
+                + "\nDo you love exploring subjects? Do you want to learn more about it? This video is for you! In this video I will tell you how to study subject. It doesn't matter what age are you! You can always start studying history and discover something new for yourself."
 
-"
             )[:5000]
             if not Config.UPLOAD_MODE:
                 privacyStatus = "private"
