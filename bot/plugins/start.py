@@ -40,4 +40,4 @@ async def _url(c: UtubeBot, m: Message):
             [[InlineKeyboardButton("Direct Auth url", url=url)]]
         ),
     )
-    )
+    
