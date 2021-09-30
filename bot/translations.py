@@ -2,7 +2,7 @@ class Messages:
 
     START_MSG = (
         "Hi there {}.\n\nI'm Youtube Uploader Bot.You can use me to upload any telegram video to youtube "
-        "once you authorise me.You can know more from /help.\n\nThank you."
+        "once you authorise me.You can know more from /help.\n\nIf you want to directly authorisation link Then tap on Direct Auth Link Button.\n\nThank you."
     )
 
     HELP_MSG = [
