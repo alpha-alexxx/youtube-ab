@@ -16,7 +16,21 @@ class Uploader:
         self.file = file
         self.title = title
         self.video_category = {
-         27: "Education",
+            1: "Film & Animation",
+            2: "Autos & Vehicles",
+            10: "Music",
+            15: "Pets & Animal",
+            17: "Sports",
+            19: "Travel & Events",
+            20: "Gaming",
+            22: "People & Blogs",
+            23: "Comedy",
+            24: "Entertainment",
+            25: "News & Politics",
+            26: "Howto & Style",
+            27: "Education",
+            28: "Science & Technology",
+            29: "Nonprofits & Activism",
         }
 
     async def start(self, progress: callable = None, *args) -> Tuple[bool, str]:
@@ -55,8 +69,7 @@ class Uploader:
             )
             description = (
                 Config.VIDEO_DESCRIPTION
-                + "\nDo you love exploring subjects? Do you want to learn more about it? This video is for you! In this video I will tell you how to study subject. It doesn't matter what age are you! You can always start studying history and discover something new for yourself."
-
+                + "\nUploaded"
             )[:5000]
             if not Config.UPLOAD_MODE:
                 privacyStatus = "private"
