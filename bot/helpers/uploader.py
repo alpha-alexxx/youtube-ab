@@ -12,8 +12,8 @@ log = logging.getLogger(__name__)
 
 
 class Uploader:
-    def __init__(self, file: str, title: Optional[str] = None):
-        self.file = file
+    def __init__(self, file_path: str, title: Optional[str] = None):
+        self.file = file_path
         self.title = title
         self.video_category = {
             1: "Film & Animation",
