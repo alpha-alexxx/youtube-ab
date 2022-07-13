@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from ..translations import Messages as tr
 from ..config import Config
 from ..utubebot import UtubeBot
+from ..youtube import GoogleAuth
 
 
 @UtubeBot.on_message(
@@ -18,7 +19,9 @@ async def _start(c: UtubeBot, m: Message):
     await m.reply_text(
         text=tr.START_MSG.format(m.from_user.first_name),
         quote=True,
+          auth = GoogleAuth(Config.CLIENT_ID, Config.CLIENT_SECRET)
+          url = auth.GetAuthUrl()
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Sign IN", url="https://accounts.google.com/o/oauth2/v2/auth?client_id=1003241289696-f8dmkhhv7e1p5ogs6of4s3qrfr6g92j6.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube.upload&access_type=offline&response_type=code")]]
+            [[InlineKeyboardButton(text="Login URL", url=url)]]
         ),
     )
